@@ -6,11 +6,11 @@
 /*   By: alisseye <alisseye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 21:24:35 by alisseye          #+#    #+#             */
-/*   Updated: 2024/09/19 22:08:47 by alisseye         ###   ########.fr       */
+/*   Updated: 2024/09/24 13:07:15 by alisseye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 char	*ft_strtrim(char const *s, char const *set)
 {

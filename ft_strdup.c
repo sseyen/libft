@@ -1,22 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alisseye <alisseye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/19 22:14:05 by alisseye          #+#    #+#             */
-/*   Updated: 2024/09/19 22:15:20 by alisseye         ###   ########.fr       */
+/*   Created: 2024/09/18 20:05:19 by alisseye          #+#    #+#             */
+/*   Updated: 2024/09/24 13:06:30 by alisseye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+char	*ft_strdup(const char *s)
 {
-	while (*s)
+	char	*dup;
+	size_t	i;
+	
+	dup = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
+	if (!dup)
+		return (NULL);
+	i = 0;
+	while (s[i])
 	{
-		ft_putchar_fd(*s, fd);
-		s++;
+		dup[i] = s[i];
+		i++;
 	}
+	dup[i] = '\0';
+	return (dup);
 }
+
+/*#include <stdio.h>
+#include <string.h>
+int	main(void)
+{
+	const char	*s1 = "Hello!";
+
+	printf("%s\n", strdup(s1));
+	printf("%s\n", ft_strdup(s1));
+}*/

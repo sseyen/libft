@@ -6,11 +6,11 @@
 /*   By: alisseye <alisseye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 16:19:38 by alisseye          #+#    #+#             */
-/*   Updated: 2024/09/18 19:14:09 by alisseye         ###   ########.fr       */
+/*   Updated: 2024/09/24 13:06:00 by alisseye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t n)
 {

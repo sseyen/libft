@@ -1,41 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alisseye <alisseye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/18 20:05:19 by alisseye          #+#    #+#             */
-/*   Updated: 2024/09/18 20:23:18 by alisseye         ###   ########.fr       */
+/*   Created: 2024/09/16 14:12:13 by alisseye          #+#    #+#             */
+/*   Updated: 2024/09/24 13:07:10 by alisseye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strrchr(const char *s, int c)
 {
-	char	*dup;
-	size_t	i;
-	
-	dup = (char *)malloc((ft_strlen(s1) + 1) * sizeof(char));
-	if (!dup)
-		return (NULL);
-	i = 0;
-	while (s1[i])
+	const char	*last;
+
+	last = NULL;
+	while (*s)
 	{
-		dup[i] = s1[i];
-		i++;
+		if (*s == c)
+			last = s;
+		s++;
 	}
-	dup[i] = '\0';
-	return (dup);
+	if (c == '\0')
+		return ((char *)s);
+	return (char *)last;
 }
 
-/*#include <stdio.h>
-#include <string.h>
-int	main(void)
-{
-	const char	*s1 = "Hello!";
-
-	printf("%s\n", strdup(s1));
-	printf("%s\n", ft_strdup(s1));
-}*/
+// #include <stdio.h>
+// int main(void)
+// {
+// 	const char *str = "Hello, world!";
+// 	const char *s = ft_strrchr(str, '\0');
+// 	printf("Original: %s\n", str);
+// 	printf("Link: %s\n", s);
+// 	return (0);
+// }

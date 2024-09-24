@@ -6,11 +6,11 @@
 /*   By: alisseye <alisseye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 16:51:45 by alisseye          #+#    #+#             */
-/*   Updated: 2024/09/18 19:13:53 by alisseye         ###   ########.fr       */
+/*   Updated: 2024/09/24 13:05:25 by alisseye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

@@ -1,19 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alisseye <alisseye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/19 22:16:56 by alisseye          #+#    #+#             */
-/*   Updated: 2024/09/19 22:18:41 by alisseye         ###   ########.fr       */
+/*   Created: 2024/09/24 12:18:31 by alisseye          #+#    #+#             */
+/*   Updated: 2024/09/24 13:06:34 by alisseye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	ft_putstr_fd(s, fd);
-	ft_putchar_fd('\n', fd);
+	unsigned int	i;
+	
+	i = 0;
+	while (s[i])
+	{
+		f(i, s + i);
+		i++;
+	}
 }
+
+// #include <stdio.h>
+// static void f(unsigned int i, char *c)
+// {
+// 	(void)i;
+// 	*c = ft_toupper(*c);
+// }
+// int	main(void)
+// {
+// 	char str[] = "hello";
+// 	ft_striteri(str, f);
+// 	printf("%s\n", str);
+// }
