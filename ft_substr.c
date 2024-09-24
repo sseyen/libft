@@ -6,11 +6,11 @@
 /*   By: alisseye <alisseye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 19:51:53 by alisseye          #+#    #+#             */
-/*   Updated: 2024/09/19 21:15:54 by alisseye         ###   ########.fr       */
+/*   Updated: 2024/09/24 13:07:19 by alisseye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 static size_t	ft_strnlen(const char *str, size_t maxlen)
 {
@@ -37,16 +37,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (sub);
 }
 
-/*#include <stdio.h>
-int main(void)
-{
-    char *str = "Hello, 42 Prague!";
-    char *sub;
-
-    sub = ft_substr(str, 7, 6);
-    printf("Substr: %s\n", sub);
-
-    free(sub);
-
-    return 0;
-}*/
+// #include <stdio.h>
+// int main(void)
+// {
+//     char *str = "Hello";
+//     char *sub;
+//     sub = ft_substr(str, 0, 6);
+//     printf("Substr: %s\n", sub);
+//     free(sub);
+//     return 0;
+// }
