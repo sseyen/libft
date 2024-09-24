@@ -6,7 +6,7 @@
 #    By: alisseye <alisseye@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/24 12:32:35 by alisseye          #+#    #+#              #
-#    Updated: 2024/09/24 13:27:36 by alisseye         ###   ########.fr        #
+#    Updated: 2024/09/24 13:31:48 by alisseye         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,4 +50,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: bonus all clean fclean re
+.PHONY: all bonus clean fclean re
