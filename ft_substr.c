@@ -6,7 +6,7 @@
 /*   By: alisseye <alisseye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 19:51:53 by alisseye          #+#    #+#             */
-/*   Updated: 2024/09/24 13:07:19 by alisseye         ###   ########.fr       */
+/*   Updated: 2024/09/26 18:41:52 by alisseye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static size_t	ft_strnlen(const char *str, size_t maxlen)
 	size_t	len;
 
 	len = 0;
-	while(str[len] && len < maxlen)
+	while (str[len] && len < maxlen)
 		len++;
 	return (len);
 }

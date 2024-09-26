@@ -6,11 +6,11 @@
 #    By: alisseye <alisseye@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/24 12:32:35 by alisseye          #+#    #+#              #
-#    Updated: 2024/09/24 13:31:48 by alisseye         ###   ########.fr        #
+#    Updated: 2024/09/26 14:59:43 by alisseye         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft
+NAME = libft.a
 
 CFLAGS = -Wall -Wextra -Werror
 
@@ -35,18 +35,18 @@ INCLUDES = libft.h
 	cc $(CFLAGS) -c $< -o $@
 
 ${NAME}: ${OBJS}
-	ar rc ${NAME}.a ${OBJS}
+	ar rc ${NAME} ${OBJS}
 
 all: ${NAME}
 
 bonus: ${OBJS} ${BOBJS}
-	ar rc ${NAME}.a ${OBJS} ${BOBJS}
+	ar rc ${NAME} ${OBJS} ${BOBJS}
 	
 clean:
 	rm -f ${OBJS} ${BOBJS}
 
 fclean: clean
-	rm -f ${NAME}.a
+	rm -f ${NAME}
 
 re: fclean all
 
