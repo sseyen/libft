@@ -6,14 +6,14 @@
 /*   By: alisseye <alisseye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 15:42:05 by alisseye          #+#    #+#             */
-/*   Updated: 2024/09/16 15:53:05 by alisseye         ###   ########.fr       */
+/*   Updated: 2024/09/26 14:33:15 by alisseye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(const char *str)
 {
 	int	sign;
-	int result;
+	int	result;
 
 	result = 0;
 	sign = 1;

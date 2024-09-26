@@ -6,7 +6,7 @@
 /*   By: alisseye <alisseye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 20:05:19 by alisseye          #+#    #+#             */
-/*   Updated: 2024/09/24 13:06:30 by alisseye         ###   ########.fr       */
+/*   Updated: 2024/09/26 14:40:42 by alisseye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strdup(const char *s)
 {
 	char	*dup;
 	size_t	i;
-	
+
 	dup = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (!dup)
 		return (NULL);

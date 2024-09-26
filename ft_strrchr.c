@@ -6,7 +6,7 @@
 /*   By: alisseye <alisseye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 14:12:13 by alisseye          #+#    #+#             */
-/*   Updated: 2024/09/24 13:07:10 by alisseye         ###   ########.fr       */
+/*   Updated: 2024/09/26 15:25:05 by alisseye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ char	*ft_strrchr(const char *s, int c)
 	last = NULL;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (char)c)
 			last = s;
 		s++;
 	}
 	if (c == '\0')
 		return ((char *)s);
-	return (char *)last;
+	return ((char *)last);
 }
 
 // #include <stdio.h>

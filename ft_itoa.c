@@ -6,16 +6,16 @@
 /*   By: alisseye <alisseye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 12:30:53 by alisseye          #+#    #+#             */
-/*   Updated: 2024/09/24 13:05:39 by alisseye         ###   ########.fr       */
+/*   Updated: 2024/09/26 14:34:47 by alisseye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int 	ft_numlen(int n)
+static int	ft_numlen(int n)
 {
-	int len;
-	
+	int	len;
+
 	len = 0;
 	if (n <= 0)
 		len++;
