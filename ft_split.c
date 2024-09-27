@@ -6,7 +6,7 @@
 /*   By: alisseye <alisseye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 13:09:42 by alisseye          #+#    #+#             */
-/*   Updated: 2024/09/24 13:27:15 by alisseye         ###   ########.fr       */
+/*   Updated: 2024/09/27 21:40:17 by alisseye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,12 @@ static int	ft_count_words(char const *s, char c)
 	{
 		while (*s == c)
 			s++;
-		while (*s && *s != c)
-			s++;
-		counter++;
+		if (*s)
+		{
+			counter++;
+			while (*s && *s != c)
+				s++;
+		}
 	}
 	return (counter);
 }
@@ -36,6 +39,14 @@ static int	ft_wordlen(char const *s, char c)
 	while (s[len] && s[len] != c)
 		len++;
 	return (len);
+}
+
+static char	**ft_free_all(char **tab, int i)
+{
+	while (i > 0)
+		free(tab[--i]);
+	free(tab);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
@@ -56,6 +67,8 @@ char	**ft_split(char const *s, char c)
 		{
 			wordlen = ft_wordlen(s, c);
 			tab[i] = ft_substr(s, 0, wordlen);
+			if (!tab[i])
+				return (ft_free_all(tab, i));
 			s += wordlen;
 			i++;
 		}
